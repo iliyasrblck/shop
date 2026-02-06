@@ -1,14 +1,31 @@
 from django.contrib import admin
 from .models import *
-# Register your models here.
+from django.contrib.auth.admin import UserAdmin
+
+# --------------------------------------------------
 
 class ImageInline(admin.TabularInline):
     model = Image
     extra = 0
 
+
 class FeatureInline(admin.TabularInline):
     model = ProductFeature
     extra = 0
+
+
+# -------------------------------------------------------------
+# Register your models here.
+
+@admin.register(Users)
+class CustomUserAdmin(UserAdmin):
+    list_display = ('username', 'first_name','last_name', 'phone')
+    fieldsets = UserAdmin.fieldsets + (
+    ('اطلاعات بیشتر', {'fields': ('phone','birthday')}),
+    )
+    search_fields = ('username', 'first_name', 'last_name', 'phone')
+    list_filter = ('first_name', 'last_name', 'phone', 'email', 'birthday')
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -16,10 +33,11 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     search_fields = ('name',)
 
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'offer', 'new_prices','category', 'inventory')
+    list_display = ('name', 'price', 'offer', 'new_prices', 'category', 'inventory')
     prepopulated_fields = {'slug': ('name',)}
-    search_fields = ('name','new_prices', 'category')
-    list_filter = ('new_prices','cerated', 'updated')
+    search_fields = ('name', 'new_prices', 'category')
+    list_filter = ('new_prices', 'cerated', 'updated')
     inlines = (ImageInline, FeatureInline)

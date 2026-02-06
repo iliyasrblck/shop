@@ -1,10 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 from django_jalali.db import models as jmodels
 
 
 # Create your models here.
 
-class users(models.Model):
+class Users(AbstractUser):
+    phone = models.CharField(max_length=11, unique=True)
+    birthday = jmodels.jDateField(null=True, blank=True )
 
 
 class Category(models.Model):
