@@ -1,5 +1,5 @@
 from django.db import models
-
+from django_jalali.db import models as jmodels
 
 # Create your models here.
 
@@ -29,8 +29,8 @@ class Product(models.Model):
     offer = models.PositiveIntegerField(verbose_name='تخفیف', default=0)
     new_prices = models.PositiveIntegerField(default=0, verbose_name='قیمت بعد از تخفیف')
 
-    cerated = models.DateTimeField(auto_now_add=True, verbose_name='زمان ایجاد')
-    updated = models.DateTimeField(auto_now=True, verbose_name='بروز رسانی زمان')
+    cerated = jmodels.jDateTimeField(auto_now_add=True, verbose_name='زمان ایجاد')
+    updated = jmodels.jDateTimeField(auto_now=True, verbose_name='بروز رسانی زمان')
 
     class Meta:
         ordering = ['-cerated']
@@ -60,7 +60,7 @@ class Image(models.Model):
     image_file = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=100, verbose_name='عنوان', null=True, blank=True)
     description = models.TextField(verbose_name='توضیحات', null=True, blank=True)
-    cerated = models.DateTimeField(auto_now_add=True)
+    cerated = jmodels.jDateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['-cerated']
