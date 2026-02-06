@@ -4,4 +4,4 @@ from .models import Product
 
 @receiver(pre_save, sender=Product)
 def call_new_price(sender, instance, **kwargs):
-    instance.new_price =  instance.price - instance.offer
+    instance.new_prices =  instance.price - instance.offer

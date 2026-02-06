@@ -1,7 +1,11 @@
 from django.db import models
 from django_jalali.db import models as jmodels
 
+
 # Create your models here.
+
+class users(models.Model):
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100)

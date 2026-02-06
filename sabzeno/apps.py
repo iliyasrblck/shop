@@ -6,3 +6,4 @@ class SabzenoConfig(AppConfig):
 
     def ready(self):
         import sabzeno.signals
+
