@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django_jalali.db import models as jmodels
-
+from django.urls import reverse
 
 # Create your models here.
 
@@ -21,6 +21,10 @@ class Category(models.Model):
         ]
         verbose_name = 'دسته بندی'
         verbose_name_plural = 'دسته بندی ها'
+
+
+    def get_absolute_url(self):
+        return reverse('sabzeno:PR-CG-list', args=[self.slug])
 
     def __str__(self):
         return self.name
@@ -48,6 +52,10 @@ class Product(models.Model):
         ]
         verbose_name = 'محصول'
         verbose_name_plural = 'محصولات'
+
+
+    def get_absolute_url(self):
+        return reverse('sabzeno:PR-detail', args=[self.slug, self.id])
 
     def __str__(self):
         return self.name

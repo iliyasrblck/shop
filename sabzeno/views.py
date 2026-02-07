@@ -19,3 +19,9 @@ def product_list(request, category_slug=None):
         'products': products,
     }
     return render(request, 'sabzeno/shop/list-products.html', context)
+
+
+def product_detail(request, product_id, slug):
+    product = get_object_or_404(Product, id=product_id, slug=slug)
+
+    return render(request, 'sabzeno/shop/detail-product.html', {'product': product})

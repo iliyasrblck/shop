@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add Custom User">
+    <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add vieiws">
+      <change afterPath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzeno/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzeno/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sabzeno/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,24 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Django Server.shop.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.shop.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="shop" type="Python.DjangoServer" factoryName="Django server">
       <module name="shop" />
@@ -122,7 +129,7 @@
       <workItem from="1770373681727" duration="2411000" />
       <workItem from="1770378095642" duration="1821000" />
       <workItem from="1770389101768" duration="3780000" />
-      <workItem from="1770471987150" duration="1157000" />
+      <workItem from="1770471987150" duration="2831000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />
@@ -140,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770392968974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add vieiws">
+      <option name="closed" value="true" />
+      <created>1770474805500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770474805500</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creat shop with Django" />
     <MESSAGE value="add Custom User" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Custom User" />
+    <MESSAGE value="add vieiws" />
+    <option name="LAST_COMMIT_MESSAGE" value="add vieiws" />
   </component>
 </project>
