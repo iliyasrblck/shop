@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add Custom User" />
+    <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add Custom User">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzeno/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,6 +122,7 @@
       <workItem from="1770373681727" duration="2411000" />
       <workItem from="1770378095642" duration="1821000" />
       <workItem from="1770389101768" duration="3780000" />
+      <workItem from="1770471987150" duration="1157000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />
