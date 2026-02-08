@@ -3,11 +3,26 @@ from django.contrib.auth.models import AbstractUser
 from django_jalali.db import models as jmodels
 from django.urls import reverse
 
+
 # Create your models here.
 
 class Users(AbstractUser):
     phone = models.CharField(max_length=11, unique=True)
-    birthday = jmodels.jDateField(null=True, blank=True )
+    birthday = jmodels.jDateField(null=True, blank=True)
+
+
+class Address(models.Model):
+    user = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='addresses')
+    Province = models.CharField(max_length=100, null=True, blank=True, verbose_name='استان')
+    city = models.CharField(max_length=100, null=True, blank=True, verbose_name='شهر')
+    full_address = models.CharField(max_length=300, blank=True, null=True, verbose_name='ادرس کامل')
+
+    class Meta:
+        verbose_name = 'ادرس'
+        verbose_name_plural = 'ادرس ها'
+
+    def __str__(self):
+        return f"name : {self.user.username}, city : {self.city}, address : {self.full_address}"
 
 
 class Category(models.Model):
@@ -21,7 +36,6 @@ class Category(models.Model):
         ]
         verbose_name = 'دسته بندی'
         verbose_name_plural = 'دسته بندی ها'
-
 
     def get_absolute_url(self):
         return reverse('sabzeno:PR-CG-list', args=[self.slug])
@@ -52,7 +66,6 @@ class Product(models.Model):
         ]
         verbose_name = 'محصول'
         verbose_name_plural = 'محصولات'
-
 
     def get_absolute_url(self):
         return reverse('sabzeno:PR-detail', args=[self.slug, self.id])

@@ -13,6 +13,9 @@ class FeatureInline(admin.TabularInline):
     model = ProductFeature
     extra = 0
 
+class AddressInline(admin.TabularInline):
+    model = Address
+    extra = 0
 
 # -------------------------------------------------------------
 # Register your models here.
@@ -25,6 +28,7 @@ class CustomUserAdmin(UserAdmin):
     )
     search_fields = ('username', 'first_name', 'last_name', 'phone')
     list_filter = ('first_name', 'last_name', 'phone', 'email', 'birthday')
+    inlines = (AddressInline,)
 
 
 @admin.register(Category)
@@ -41,3 +45,10 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ('name', 'new_prices', 'category')
     list_filter = ('new_prices', 'cerated', 'updated')
     inlines = (ImageInline, FeatureInline)
+
+
+@admin.register(Address)
+class AddressAdmin(admin.ModelAdmin):
+    list_display = ['user', 'Province', 'city']
+    list_filter = ['Province', 'city']
+    search_fields = ['Province', 'city' , 'user__username', 'user__first_name', 'user__last_name', 'full_address']
