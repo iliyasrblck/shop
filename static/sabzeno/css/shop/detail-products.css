@@ -1,0 +1,182 @@
+/* تنظیمات عمومی صفحه */
+body {
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* هدر در وسط صفحه */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #00adb5;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* بخش تصاویر: چیدمان کنار هم با اندازه استاندارد */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.images a {
+    background-color: #1a1a1a; /* بک‌گراند پررنگ‌تر برای عکس‌ها */
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.images a:hover {
+    border-color: #00adb5;
+    transform: scale(1.03);
+}
+
+.images img {
+    width: 200px; /* اندازه استاندارد عرض */
+    height: 200px; /* اندازه استاندارد ارتفاع */
+    object-fit: cover; /* حفظ تناسب عکس در کادر */
+    border-radius: 8px;
+    display: block;
+}
+
+/* بخش توضیحات */
+.description {
+    background-color: #151515;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    border-right: 4px solid #00adb5;
+}
+
+.description h2 {
+    color: #00adb5;
+    margin-top: 0;
+}
+
+.description p {
+    color: #bbb;
+}
+
+/* بخش قیمت و موجودی (پایین سمت چپ) */
+.enuf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* تراز کردن محتوا به سمت چپ (در حالت RTL) */
+    margin-left: 5%; /* ایجاد فاصله از گوشه صفحه */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: fit-content;
+    border: 1px solid #282828;
+}
+
+.enuf p {
+    margin: 5px 0;
+}
+
+.enuf h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.enuf s p {
+    color: #777;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.enuf b p {
+    color: #00adb5;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) {
+    .images img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .enuf {
+        margin-left: auto;
+        margin-right: auto; /* در موبایل وسط‌چین شود */
+        align-items: center;
+        width: 80%;
+    }
+}
+
+/* کانتینر جدید */
+.purchase-section {
+    display: flex;
+    flex-direction: row; /* قرارگیری در یک ردیف */
+    align-items: flex-end; /* تراز شدن از پایین */
+    gap: 20px; /* فاصله بین قیمت و دکمه */
+    margin-left: 5%; /* فاصله از لبه چپ که خواسته بودی */
+    justify-content: flex-start; /* چسبیدن به سمت چپ (در حالت RTL) */
+    margin-top: 30px;
+}
+
+/* اصلاح استایل باکس قیمت */
+.enuf {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #282828;
+    min-width: 200px;
+}
+
+/* اصلاح استایل دکمه خرید */
+.buy a {
+    display: block;
+    background-color: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s;
+    white-space: nowrap; /* جلوگیری از شکستن متن دکمه */
+}
+
+.buy a:hover {
+    background-color: #00ced1;
+    transform: translateY(-3px);
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .purchase-section {
+        flex-direction: column-reverse; /* در موبایل زیر هم بروند (دکمه بالا، قیمت پایین یا برعکس) */
+        align-items: center;
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    .buy, .enuf {
+        width: 90%;
+        text-align: center;
+    }
+}

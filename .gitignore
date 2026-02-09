@@ -1,0 +1,14 @@
+static/sabzeno/images/
+# دیتابیس محلی (که حجم زیادی داره و نباید آپلود بشه)
+*.sqlite3
+
+# فایل‌های تنظیمات حساس (اگر داری)
+.env
+
+# پوشه‌های پایتون
+__pycache__/
+*.py[cod]
+
+# پوشه محیط مجازی (Virtual Environment)
+venv/
+env/

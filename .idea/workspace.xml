@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0004_alter_address_options_alter_image_image_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0005_alter_image_image_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0006_alter_image_image_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0007_alter_image_image_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0008_alter_image_image_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabzeno/templatetags/filter_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/sabzeno/css/base/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/list-products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sabzeno/base/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/IMG_4064.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabzeno/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabzeno/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzeno/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sabzeno/css/shop/list-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/list-products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sabzeno/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sabzeno/shop/list-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/shop/list-products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -67,37 +58,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.shop.executor": "Run",
-    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
-    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.shop.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\code\django\shop\sabzeno" />
@@ -182,6 +173,7 @@
       <workItem from="1770624110875" duration="1380000" />
       <workItem from="1770627720915" duration="627000" />
       <workItem from="1770628522965" duration="5589000" />
+      <workItem from="1770662136265" duration="6798000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />

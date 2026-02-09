@@ -52,3 +52,8 @@ class AddressAdmin(admin.ModelAdmin):
     list_display = ['user', 'Province', 'city']
     list_filter = ['Province', 'city']
     search_fields = ['Province', 'city' , 'user__username', 'user__first_name', 'user__last_name', 'full_address']
+
+
+@admin.register(Image)
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ['product', 'title']

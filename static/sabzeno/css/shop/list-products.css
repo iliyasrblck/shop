@@ -1,0 +1,153 @@
+/* تنظیمات پایه برای تم دارک */
+body {
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* تراز کردن هدر */
+.header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #00adb5;
+}
+
+/* حل مشکل اصلی: قرار دادن دسته بندی در سمت چپ و محصولات در راست */
+.contaner {
+    display: flex;
+    flex-direction: row-reverse; /* برعکس کردن جهت برای انتقال دسته بندی به چپ در صفحه RTL */
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* بخش دسته بندی ها (سمت چپ) */
+.small-div {
+    flex: 0 0 250px; /* عرض ثابت برای ستون چپ */
+    background-color: #151515;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #222;
+    position: sticky;
+    top: 20px;
+}
+
+.categoris {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category {
+    margin-bottom: 10px;
+}
+
+.category a {
+    text-decoration: none;
+    color: #aaa;
+    display: block;
+    padding: 12px;
+    background-color: #1d1d1d;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.category a:hover {
+    background-color: #00adb5;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+/* بخش محصولات (سمت راست) */
+.large-div {
+    flex: 1; /* اشغال بقیه فضا */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* استایل کارت هر محصول */
+.product {
+    background-color: #181818; /* خاکستری بسیار تیره */
+    border: 1px solid #282828;
+    border-radius: 15px;
+    padding: 15px;
+    width: calc(33.333% - 14px); /* سه محصول در هر ردیف */
+    min-width: 220px;
+    display: flex;
+    flex-direction: column; /* چیدمان عمودی داخلی */
+    transition: all 0.3s ease;
+}
+
+.product:hover {
+    border-color: #00adb5;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* رعایت ترتیب درخواستی: اول نام، دوم عکس، سوم قیمت */
+.product h2 {
+    order: 1;
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+}
+
+.product h2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.product img {
+    order: 2;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product s, .product b {
+    order: 3;
+    display: block;
+    text-align: center;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product s p {
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: line-through;
+}
+
+.product b p {
+    color: #00adb5;
+    font-size: 1.2rem;
+}
+
+/* ریسپانسیو کردن برای موبایل و تبلت */
+@media (max-width: 1024px) {
+    .product {
+        width: calc(50% - 10px); /* دو محصول در ردیف */
+    }
+}
+
+@media (max-width: 768px) {
+    .contaner {
+        flex-direction: column; /* نمایش عمودی در موبایل */
+    }
+    .small-div {
+        width: 100%;
+        flex: none;
+        position: static;
+    }
+    .product {
+        width: 100%; /* یک محصول در هر ردیف */
+    }
+}

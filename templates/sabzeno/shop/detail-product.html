@@ -1,0 +1,41 @@
+{% extends 'sabzeno/base/base.html' %}
+{% load static %}
+{% load filter_tags %}
+
+
+{% block title %}اطلاعات محصول{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/detail-products.css' %}">
+{% endblock %}
+
+{% block context %}
+    <div class="full">
+        <div class="header">
+            <h1>{{ product.name }}</h1>
+        </div>
+
+        <div class="images">
+            {% for img in product.images.all %}
+                <a href="{{ img.image_file.url }}" target="photo_view"><img src="{{ img.image_file.url }}"></a>
+            {% endfor %}
+        </div>
+
+        <div class="description">
+            <h2>توضیحات</h2>
+            <p>{{ product.description }}</p>
+        </div>
+        <div class="purchase-section">
+            <div class="enuf">
+                <p> تعداد مجود : {{ product.inventory }}</p>
+                <h2>قیمت:</h2>
+                <s><p>{{ product.price|intcomma_custom }} تومان</p></s>
+                <b><p>{{ product.new_prices|intcomma_custom }}تومان</p></b>
+            </div>
+            <div class="buy">
+                <a href="#">افزودن به سبد خرید</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
