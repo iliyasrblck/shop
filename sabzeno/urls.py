@@ -15,6 +15,4 @@ urlpatterns = [
     path('product/<int:product_id>/<slug:slug>', views.product_detail, name='PR-detail'),
 
 
-
-
 ]

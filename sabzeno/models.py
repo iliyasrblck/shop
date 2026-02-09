@@ -2,9 +2,15 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django_jalali.db import models as jmodels
 from django.urls import reverse
+from django_resized import ResizedImageField
 
+#overrides.
+
+def upload_to(instance, filename: str) -> str:
+    return f'img/{instance.product.category}/{filename}'
 
 # Create your models here.
+
 
 class Users(AbstractUser):
     phone = models.CharField(max_length=11, unique=True)
@@ -68,7 +74,7 @@ class Product(models.Model):
         verbose_name_plural = 'محصولات'
 
     def get_absolute_url(self):
-        return reverse('sabzeno:PR-detail', args=[self.slug, self.id])
+        return reverse('sabzeno:PR-detail', args=[self.id, self.slug])
 
     def __str__(self):
         return self.name
@@ -85,7 +91,7 @@ class ProductFeature(models.Model):
 
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images', verbose_name='محصول')
-    image_file = models.ImageField(upload_to='images/')
+    image_file = ResizedImageField(upload_to=upload_to, size=[300, 300], crop=['middle', 'center'])
     title = models.CharField(max_length=100, verbose_name='عنوان', null=True, blank=True)
     description = models.TextField(verbose_name='توضیحات', null=True, blank=True)
     cerated = jmodels.jDateTimeField(auto_now_add=True)

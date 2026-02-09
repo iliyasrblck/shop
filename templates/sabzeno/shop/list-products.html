@@ -1,0 +1,50 @@
+{% extends 'sabzeno/base/base.html' %}
+{% load static %}
+{% load filter_tags %}
+
+
+{% block title %}لیست محصولات{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'sabzeno/css/shop/list-products.css' %}">
+{% endblock %}
+
+
+{% block context %}
+    <div class="header">
+        {% if category %}
+            <h1>لیست محصولات بر اساس دسته بندی {{ category.name }}</h1>
+        {% else %}
+            <h1>لیست محصولات</h1>
+        {% endif %}
+    </div>
+
+    <div class="contaner">
+        <div class="small-div">
+            <ul class="categoris">
+                <li class="category"> <a href="{% url 'sabzeno:PR-list' %}">All</a> </li>
+                {% for ct in categoris %}
+                    <li class="category"> <a href="{{ ct.get_absolute_url }}">{{ ct.name }}</a> </li>
+                {% endfor %}
+
+
+        <div class="large-div">
+            {% for pr in products %}
+                <div class="product">
+                    <h2><a href="{{ pr.get_absolute_url }}">{{ pr.name }}</a></h2>
+                    <img src="{{ pr.images.first.image_file.url  }}">
+                    {% if pr.offer != 0 %}
+                        <s><p>{{ pr.price|intcomma_custom }} تومان</p></s>
+                    {% endif %}
+                    <b><p>{{ pr.new_prices|intcomma_custom }}تومان</p></b>
+                </div>
+            {% endfor %}
+
+        </div>
+
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}
