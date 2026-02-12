@@ -1,4 +1,4 @@
-/* تنظیمات عمومی صفحه */
+/* تنظیمات پایه صفحه */
 body {
     background-color: #0c0c0c;
     color: #e0e0e0;
@@ -14,169 +14,117 @@ body {
     padding: 40px 20px;
 }
 
-/* هدر در وسط صفحه */
-.header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.header h1 {
-    color: #ffffff;
-    font-size: 2.2rem;
-    border-bottom: 3px solid #00adb5;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-/* بخش تصاویر: چیدمان کنار هم با اندازه استاندارد */
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.images a {
-    background-color: #1a1a1a; /* بک‌گراند پررنگ‌تر برای عکس‌ها */
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: 0.3s;
-}
-
-.images a:hover {
-    border-color: #00adb5;
-    transform: scale(1.03);
-}
-
-.images img {
-    width: 200px; /* اندازه استاندارد عرض */
-    height: 200px; /* اندازه استاندارد ارتفاع */
-    object-fit: cover; /* حفظ تناسب عکس در کادر */
-    border-radius: 8px;
-    display: block;
-}
-
-/* بخش توضیحات */
-.description {
-    background-color: #151515;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    border-right: 4px solid #00adb5;
-}
-
-.description h2 {
-    color: #00adb5;
-    margin-top: 0;
-}
-
-.description p {
-    color: #bbb;
-}
-
-/* بخش قیمت و موجودی (پایین سمت چپ) */
-.enuf {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* تراز کردن محتوا به سمت چپ (در حالت RTL) */
-    margin-left: 5%; /* ایجاد فاصله از گوشه صفحه */
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    width: fit-content;
-    border: 1px solid #282828;
-}
-
-.enuf p {
-    margin: 5px 0;
-}
-
-.enuf h2 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-.enuf s p {
-    color: #777;
-    text-decoration: line-through;
-    font-size: 0.9rem;
-}
-
-.enuf b p {
-    color: #00adb5;
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-/* واکنش‌گرایی برای موبایل */
-@media (max-width: 768px) {
-    .images img {
-        width: 140px;
-        height: 140px;
-    }
-
-    .enuf {
-        margin-left: auto;
-        margin-right: auto; /* در موبایل وسط‌چین شود */
-        align-items: center;
-        width: 80%;
-    }
-}
-
-/* کانتینر جدید */
+/* بخش اصلی خرید و مشخصات (سه ستونه) */
 .purchase-section {
     display: flex;
-    flex-direction: row; /* قرارگیری در یک ردیف */
-    align-items: flex-end; /* تراز شدن از پایین */
-    gap: 20px; /* فاصله بین قیمت و دکمه */
-    margin-left: 5%; /* فاصله از لبه چپ که خواسته بودی */
-    justify-content: flex-start; /* چسبیدن به سمت چپ (در حالت RTL) */
-    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-/* اصلاح استایل باکس قیمت */
-.enuf {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #282828;
-    min-width: 200px;
+/* استایل اختصاصی کلاس Special (مشخصات کالا) */
+.Special {
+    flex: 1.5;
+    background-color: #0f0b1a !important; /* بنفش بسیار تیره */
+    border: 2px solid #3b2d5a !important;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* اصلاح استایل دکمه خرید */
+/* تیتر مشخصات کالا */
+.Special p {
+    background: linear-gradient(135deg, #1a1429 0%, #2e2344 100%) !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    text-align: center;
+    border-bottom: 2px solid #7c3aed !important;
+}
+
+.Special p b {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 5px rgba(124, 58, 237, 0.5);
+}
+
+.Special ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* ردیف‌های ویژگی‌ها */
+.Special li {
+    padding: 15px 25px !important;
+    border-bottom: 1px solid #2e2344 !important;
+    color: #cbd5e1 !important;
+    font-size: 0.95rem;
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+/* ردیف‌های یکی در میان */
+.Special li:nth-child(odd) {
+    background-color: #141021;
+}
+
+/* افکت هوور روی ردیف‌ها */
+.Special li:hover {
+    background-color: #1e1433 !important;
+    color: #a78bfa !important;
+    padding-right: 35px !important; /* لغزش به سمت چپ */
+}
+
+/* خط بنفش عمودی هنگام هوور */
+.Special li:hover::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #7c3aed;
+}
+
+.Special li:last-child {
+    border-bottom: none !important;
+}
+
+/* استایل دکمه خرید و قیمت (جهت تکمیل چیدمان) */
+.buy {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .buy a {
-    display: block;
-    background-color: #00adb5;
+    background-color: #7c3aed;
     color: #fff;
-    text-decoration: none;
-    padding: 18px 40px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 18px 30px;
     border-radius: 12px;
-    transition: 0.3s;
-    white-space: nowrap; /* جلوگیری از شکستن متن دکمه */
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.buy a:hover {
-    background-color: #00ced1;
-    transform: translateY(-3px);
+.enuf {
+    flex: 1;
+    background-color: #130f1f;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #2e2344;
+    text-align: center;
 }
 
-/* ریسپانسیو برای موبایل */
-@media (max-width: 768px) {
+/* ریسپانسیو موبایل */
+@media (max-width: 900px) {
     .purchase-section {
-        flex-direction: column-reverse; /* در موبایل زیر هم بروند (دکمه بالا، قیمت پایین یا برعکس) */
-        align-items: center;
-        margin-left: 0;
-        gap: 15px;
+        flex-direction: column;
+        gap: 20px;
     }
-
-    .buy, .enuf {
-        width: 90%;
-        text-align: center;
+    .Special, .buy, .enuf {
+        width: 100%;
     }
 }

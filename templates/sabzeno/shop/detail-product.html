@@ -13,7 +13,8 @@
 {% block context %}
     <div class="full">
         <div class="header">
-            <h1>{{ product.name }}</h1>
+
+            <h1> محصول: {{ product.name }} </h1>
         </div>
 
         <div class="images">
@@ -27,15 +28,38 @@
             <p>{{ product.description }}</p>
         </div>
         <div class="purchase-section">
+
+
             <div class="enuf">
                 <p> تعداد مجود : {{ product.inventory }}</p>
                 <h2>قیمت:</h2>
-                <s><p>{{ product.price|intcomma_custom }} تومان</p></s>
-                <b><p>{{ product.new_prices|intcomma_custom }}تومان</p></b>
+                {% if product.offer == 0 %}
+
+                    <b><p>{{ product.new_prices|intcomma_custom }}تومان</p></b>
+
+                {% else %}
+
+                    <s><p>{{ product.price|intcomma_custom }} تومان</p></s>
+                    <b><p>{{ product.new_prices|intcomma_custom }}تومان</p></b>
+
+                {% endif %}
             </div>
+
+
             <div class="buy">
                 <a href="#">افزودن به سبد خرید</a>
             </div>
+
+
+            <div class="Special">
+                <p><b>مشحصات کالا</b></p>
+                <ul>
+                    {% for f in product.feature.all %}
+                        <li>{{ f.name }} : {{ f.value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
         </div>
     </div>
 {% endblock %}

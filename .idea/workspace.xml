@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabzeno/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sabzeno/css/shop/list-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/list-products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sabzeno/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sabzeno/shop/list-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/shop/list-products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +167,9 @@
       <workItem from="1770624110875" duration="1380000" />
       <workItem from="1770627720915" duration="627000" />
       <workItem from="1770628522965" duration="5589000" />
-      <workItem from="1770662136265" duration="6798000" />
+      <workItem from="1770662136265" duration="7197000" />
+      <workItem from="1770739198868" duration="4001000" />
+      <workItem from="1770850317709" duration="297000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />
