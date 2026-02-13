@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add">
+      <change afterPath="$PROJECT_DIR$/cart/cart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabzeno/migrations/0009_product_weoght.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabzeno/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabzeno/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -169,7 +172,7 @@
       <workItem from="1770739198868" duration="4001000" />
       <workItem from="1770850317709" duration="297000" />
       <workItem from="1770898615721" duration="1805000" />
-      <workItem from="1770972881075" duration="2319000" />
+      <workItem from="1770972881075" duration="6283000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />

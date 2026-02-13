@@ -59,7 +59,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(verbose_name='قیمت', default=0)
     offer = models.PositiveIntegerField(verbose_name='تخفیف', default=0)
     new_prices = models.PositiveIntegerField(default=0, verbose_name='قیمت بعد از تخفیف')
-
+    weoght = models.PositiveIntegerField(default=0, verbose_name='وزن')
     cerated = jmodels.jDateTimeField(auto_now_add=True, verbose_name='زمان ایجاد')
     updated = jmodels.jDateTimeField(auto_now=True, verbose_name='بروز رسانی زمان')
 
