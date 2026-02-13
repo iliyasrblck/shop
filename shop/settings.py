@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'sabzeno.apps.SabzenoConfig',
     'django.contrib.humanize',
     "django_jalali",
+    'cart.apps.CartConfig'
 ]
 
 MIDDLEWARE = [

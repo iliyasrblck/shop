@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f48b0c1a-c5a4-4a90-b498-2432a4b8f602" name="Changes" comment="add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/sabzeno/css/shop/detail-products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sabzeno/shop/detail-product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +168,8 @@
       <workItem from="1770662136265" duration="7197000" />
       <workItem from="1770739198868" duration="4001000" />
       <workItem from="1770850317709" duration="297000" />
+      <workItem from="1770898615721" duration="1805000" />
+      <workItem from="1770972881075" duration="2319000" />
     </task>
     <task id="LOCAL-00001" summary="creat shop with Django">
       <option name="closed" value="true" />
